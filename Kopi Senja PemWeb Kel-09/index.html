@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PROJEK09</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;900&family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+        rel="stylesheet" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+        <a href="#home" class="navbar-logo">KOPI <span>Senja</span>.</a>
+        <div class="navbar-nav">
+            <a href="#home">Home</a>
+            <a href="#about">Tentang Kami</a>
+            <a href="#menu">Menu</a>
+            <a href="#contact">Kontak</a>
+        </div>
+        <div class="navbar-extra">
+            <a href="#" id="shopping-cart" class="navbar-cart">
+                <img src="dist/img/shopping-cart.png" alt="shopping-cart" />
+                <span id="cart-count">0</span>
+            </a>
+            <a href="#" id="hamburger-menu">
+                <img src="dist/img/menu.png" alt="hamburger-menu" />
+            </a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Section Start -->
+    <section class="hero" id="home">
+        <main class="content">
+            <h1>Mari nikmati secangkir <span>kopi</span></h1>
+            <p>Setetes kopi ribuan pikiran membawa inspirasi!</p>
+            <a href="#menu" class="cta">Beli Sekarang</a>
+        </main>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- About Section Start -->
+    <section id="about" class="about">
+        <h2><span>Tentang</span> Kami</h2>
+        <div class="row">
+            <div class="about-img">
+                <img src="dist/img/3.jpg" alt="Tentang Kami" />
+            </div>
+            <div class="content">
+                <h3>Kenapa memilih kopi kami?</h3>
+                <p>
+                    Kopi kami dibuat dengan biji kopi kualitas tinggi serta proses pembuatan dari tangan sang ahli peracik kopi.
+                    Kualitas sajian kopi pilihan Anda akan selalu terjamin. Secangkir kopi hadirkan inspirasi yang hanya bisa dinikmati lewat kata dan aksara.
+                </p>
+                <p>
+                    Kopi selalu memiliki daya tarik tersendiri, tidak hanya memberi semangat dan energi bahkan sering menjadi inspirasi bagi banyak orang yang membuat pikiran menjadi lebih tenang.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Menu Section Start -->
+    <section id="menu" class="menu">
+        <h2><span>Menu</span> Kami</h2>
+        <p>
+            Rasakan sensasi lezatnya cita rasa kopi kami dengan pilihan menu yang beragam.
+            Temukan kelezatan yang belum pernah Anda rasakan sebelumnya.
+        </p>
+        <div class="row">
+            <!-- Menu Cards -->
+            <div class="menu-card" data-name="Espresso" data-price="45000">
+                <img class="menu-card-img" src="dist/img/Espresso.png" alt="Espresso" />
+                <h3 class="menu-card-title">- Espresso -</h3>
+                <p class="menu-card-price">Rp 45.000</p>
+                <button type="button" class="buybtn">Tambah ke Keranjang</button>
+            </div>
+            <div class="menu-card" data-name="Americano" data-price="65000">
+                <img class="menu-card-img" src="dist/img/Americano.png" alt="Americano" />
+                <h3 class="menu-card-title">- Americano -</h3>
+                <p class="menu-card-price">Rp 65.000</p>
+                <button type="button" class="buybtn">Tambah ke Keranjang</button>
+            </div>
+            <div class="menu-card" data-name="Long Black" data-price="55000">
+                <img class="menu-card-img" src="dist/img/Long_Black.png" alt="Long Black" />
+                <h3 class="menu-card-title">- Long Black -</h3>
+                <p class="menu-card-price">Rp 55.000</p>
+                <button type="button" class="buybtn">Tambah ke Keranjang</button>
+            </div>
+            <div class="menu-card" data-name="Mocha" data-price="70000">
+                <img class="menu-card-img" src="dist/img/Mocha.png" alt="Mocha" />
+                <h3 class="menu-card-title">- Mocha -</h3>
+                <p class="menu-card-price">Rp 70.000</p>
+                <button type="button" class="buybtn">Tambah ke Keranjang</button>
+            </div>
+            <!-- Added Cappuccino and Latte -->
+            <div class="menu-card" data-name="Cappuccino" data-price="60000">
+                <img class="menu-card-img" src="dist/img/Cappuccino.png" alt="Cappuccino" />
+                <h3 class="menu-card-title">- Cappuccino -</h3>
+                <p class="menu-card-price">Rp 60.000</p>
+                <button type="button" class="buybtn">Tambah ke Keranjang</button>
+            </div>
+            <div class="menu-card" data-name="Latte" data-price="70000">
+                <img class="menu-card-img" src="dist/img/Latte.png" alt="Latte" />
+                <h3 class="menu-card-title">- Latte -</h3>
+                <p class="menu-card-price">Rp 70.000</p>
+                <button type="button" class="buybtn">Tambah ke Keranjang</button>
+            </div>
+        </div>
+    </section>
+    <!-- Menu Section End -->
+
+    <!-- Keranjang Belanja Modal -->
+<!-- Keranjang Belanja Modal -->
+<div id="cart-modal" class="modal">
+  <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Keranjang Belanja</h2>
+      <table id="cart-items-table">
+          <thead>
+              <tr>
+                  <th class="hehe">Produk</th>
+                  <th class="hehe">Jumlah</th>
+                  <th class="hehe">Harga</th>
+                  <th class="hehe">Total</th>
+              </tr>
+          </thead>
+          <tbody id="cart-items" class="hehe">
+              <!-- Item keranjang akan dimasukkan secara dinamis -->
+          </tbody>
+      </table>
+      <div class="cart-summary">
+        <span > Total: </span>
+        <span id="cart-total"> Rp 0</span>
+          
+      </div>
+      <div class="cart-buttons">
+          <button class="btn primary" id="checkout-btn">Checkout</button>
+          <button class="btn" id="continue-shopping-btn">Lanjutkan Belanja</button>
+      </div>
+  </div>
+</div>
+
+
+
+    <!-- Contact Section Start -->
+    <section class="contact" id="contact">
+      <h2><span>Contact</span> Us</h2>
+      <div class="row">
+          <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d506707.08202357043!2d111.35187915000002!3d-7.166503699999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7781b4e3727c13%3A0x1c372a68f5ad7118!2sSenja%20coffee%20shop!5e0!3m2!1sid!2sid!4v1676129221000!5m2!1sid!2sid"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+          <form id="contactForm">
+              <div class="input-group">
+                  <img src="dist/img/user.svg" alt="Nama" />
+                  <input type="text" id="nama" placeholder="Nama" required />
+              </div>
+              <div class="input-group">
+                  <img src="dist/img/mail.svg" alt="Kritik & Saran" />
+                  <input type="text" id="pesan" placeholder="Kritik & Saran" required />
+              </div>
+              <button type="button" class="btn" id="kirimPesan">
+                  Kirim Pesan
+              </button>
+          </form>
+      </div>
+  </section>
+    <!-- Contact Section End -->
+
+    <!-- Footer Start -->
+    <footer>
+        <div class="social">
+            <a href="https://www.instagram.com/senjacoffee_shop/" target="_blank">
+                <img src="dist/img/instagram.svg" alt="instagram" />
+            </a>
+            <a href="#">
+                <img src="dist/img/youtube.svg" alt="youtube" />
+            </a>
+            <a href="#">
+                <img src="dist/img/facebook.svg" alt="facebook" />
+            </a>
+        </div>
+        <div class="link">
+            <a href="#home">Home</a>
+            <a href="#about">Tentang Kami</a>
+            <a href="#menu">Menu</a>
+            <a href="#contact">Kontak</a>
+        </div>
+        <div class="credit">
+            <p>Created By: <a href="https://www.instagram.com/eeeeeehhhhh2023/" target="_blank">Kelompok 9</a> | &copy; 2024.</p>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Feather Icons -->
+    <script>
+        feather.replace();
+    </script>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    <script>
+      // Menangani tombol kirim pesan
+      document.getElementById('kirimPesan').addEventListener('click', function () {
+          // Ambil nilai dari input form
+          const nama = document.getElementById('nama').value;
+          const pesan = document.getElementById('pesan').value;
+  
+          // Periksa apakah kedua input terisi
+          if (!nama || !pesan) {
+              alert('Harap isi Nama dan Kritik & Saran!');
+              return;
+          }
+  
+          // Format teks untuk dikirim ke WhatsApp
+          const teks = `Halo, saya ${nama}. Berikut adalah Kritik & Saran saya: ${pesan}`;
+  
+          // Nomor WhatsApp tujuan
+          const nomorWhatsApp = '6281953651198';
+  
+          // Buat URL WhatsApp
+          const waLink = `https://wa.me/${nomorWhatsApp}?text=${encodeURIComponent(teks)}`;
+  
+          // Redirect ke WhatsApp
+          window.open(waLink, '_blank');
+      });
+  </script>
+    <script>
+        const cart = [];
+        const cartCount = document.getElementById('cart-count');
+        const cartModal = document.getElementById('cart-modal');
+        const cartItems = document.getElementById('cart-items');
+        const cartTotal = document.getElementById('cart-total');
+        const closeBtn = document.querySelector('.close-btn');
+        const checkoutBtn = document.getElementById('checkout-btn');
+        
+        const thankYouMsg = document.getElementById('thank-you-msg');
+
+        document.querySelectorAll('.buybtn').forEach(button => {
+            button.addEventListener('click', event => {
+                const card = event.target.closest('.menu-card');
+                const name = card.dataset.name;
+                const price = parseInt(card.dataset.price);
+
+                const existingItem = cart.find(item => item.name === name);
+                if (existingItem) {
+                    existingItem.quantity++;
+                } else {
+                    cart.push({ name, price, quantity: 1 });
+                }
+                updateCart();
+            });
+        });
+
+        function updateCart() {
+    cartCount.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+    cartItems.innerHTML = cart
+        .map(item => `
+            <tr>
+                <td>${item.name}</td>
+                <td>${item.quantity}</td>
+                <td>Rp ${(item.price ).toLocaleString()}</td>
+                <td>Rp ${(item.price * item.quantity).toLocaleString()}</td>
+            </tr>
+        `)
+        .join('');
+    cartTotal.textContent = `Rp ${cart.reduce((sum, item) => sum + item.price * item.quantity, 0).toLocaleString()}`;
+}
+
+
+        closeBtn.addEventListener('click', () => {
+            cartModal.style.display = 'none';
+        });
+
+        document.getElementById('shopping-cart').addEventListener('click', (event) => {
+            event.preventDefault();
+            cartModal.style.display = 'flex';
+        });
+
+        checkoutBtn.addEventListener('click', () => {
+            if (cart.length === 0) {
+                alert('Keranjang kosong!');
+            } else {
+                cart.length = 0; // Kosongkan keranjang
+                updateCart();
+                cartModal.style.display = 'none';
+                thankYouMsg.style.display = 'block';
+
+                setTimeout(() => {
+                    thankYouMsg.style.display = 'none';
+                }, 5000); // Sembunyikan pesan setelah 5 detik
+            }
+        });
+    </script>
+</body>
+
+</html>
